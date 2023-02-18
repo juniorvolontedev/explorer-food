@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
 import { Container } from "./styles";
 import { AuthScreen } from "../../components/AuthScreen";
@@ -9,7 +8,6 @@ import { Button } from "../../components/Button";
 import { TextLink } from "../../components/TextLink";
 import Swal from "sweetalert2";
 import "@sweetalert2/theme-dark";
-import { api } from "../../services/api";
 
 export function SignIn() {
   const [email, setEmail] = useState("");
