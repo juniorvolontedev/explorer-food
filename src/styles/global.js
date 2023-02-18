@@ -25,4 +25,16 @@ export default createGlobalStyle`
   button {
     font-family: ${({ theme }) => theme.FONTS.SECONDARY};
   }
+
+  .swal2-popup {
+    font-size: 1.6rem;
+  }
+
+  .swal2-styled.swal2-confirm {
+    background: ${({ theme }) => theme.COLORS.TOMATO_100};
+  }
+
+  .swal2-styled.swal2-confirm:focus {
+    box-shadow: 0 0 0 3px #dc374159;
+  }
 `;
