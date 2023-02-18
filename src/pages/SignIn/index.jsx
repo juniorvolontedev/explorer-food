@@ -17,8 +17,6 @@ export function SignIn() {
 
   const { signIn } = useAuth();
 
-  const navigate = useNavigate();
-
   function handleSingIn(e) {
     e.preventDefault();
 
