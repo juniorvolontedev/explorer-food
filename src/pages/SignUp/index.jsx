@@ -21,7 +21,7 @@ export function SignUp() {
     e.preventDefault();
 
     if (!name || !email || !password) {
-      Swal.fire({
+      return Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Os campos nome, email e senha são obrigatórios.",
@@ -31,7 +31,7 @@ export function SignUp() {
     const validEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!validEmailRegex.test(email)) {
-      Swal.fire({
+      return Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Digite um e-mail válido.",
@@ -39,7 +39,7 @@ export function SignUp() {
     }
 
     if (password && password.length < 6) {
-      Swal.fire({
+      return Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "A senha precisa ter no minimo 6 caracteres.",
@@ -59,13 +59,13 @@ export function SignUp() {
       })
       .catch((error) => {
         if (error.response) {
-          Swal.fire({
+          return Swal.fire({
             icon: "error",
             title: "Oops...",
             text: error.response.data.message,
           });
         } else {
-          Swal.fire({
+          return Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Não foi possível cadastrar, tente novamente mais tarde",
